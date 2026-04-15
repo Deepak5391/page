@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:linear-gradient(#7fb3ff);
+}
+
+/* CONTAINER */
+.container{
+  max-width:900px;
+  margin:auto;
+}
+
+/* TOP IMAGE */
+.top img{
+  width:100%;
+  display:block;
+  border-bottom-left-radius:25px;
+  border-bottom-right-radius:25px;
+}
+
+/* DATE BAR */
+.date{
+  
+  padding:10px;
+  text-align:right;
+  font-weight:700;
+  font-size:25px;
+}
+
+/* ROW */
+.row{
+  display:flex;
+  gap:15px;
+  padding:20px;
+}
+
+/* LEFT BOX */
+.left{
+  flex:1;
+  background:rgba(131, 200, 240, 0.75);
+  padding:20px;
+  border-radius:12px;
+}
+
+/* RIGHT BOX */
+.right{
+  flex:1;
+  background:#f8f8f8;
+  padding:20px;
+  border-radius:12px;
+}
+
+/* AGENDA STYLE */
+.item{
+  display:flex;
+  align-items:flex-start;
+  margin-bottom:15px;
+}
+
+.icon{
+  width:25px;
+  height:25px;
+  background:black;
+  color:white;
+  border-radius:50%;
+  text-align:center;
+  line-height:25px;
+  margin-right:10px;
+  font-size:14px;
+}
+
+/* LINE */
+.line{
+  height:1px;
+  background:#999;
+  margin:10px 0;
+}
+
+/* TITLE */
+.title{
+  text-align:center;
+  margin-top:20px;
+  font-weight:700;
+}
+
+/* UNLOCK CARDS (FIXED STYLE) */
+.cards{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  flex-wrap:wrap;
+}
+
+.card{
+  width:17%;
+  background:#f2f2f2;
+  border-radius:30px;
+  padding:15px 10px;
+  text-align:left;
+  font-size:13px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* NUMBER CIRCLE */
+.num{
+  background:#ddd;
+  text-align:center;
+  width:35px;
+  height:35px;
+  margin:auto;
+  border-radius:50%;
+  line-height:35px;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+/* BUTTON */
+.btn{
+  display:block;
+  width:220px;
+  margin:20px auto;
+  padding:15px;
+  background:#ff6a00;
+  color:white;
+  text-align:center;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:10px;
+  font-size:20px;
+}
+.bottom-banner {
+    position: absolute;
+    top: 320px;
+    display: flex;
+    justify-content: right;
+}
+
+.bottom-banner img {
+    width: 100%;
+    max-width: 910px;
+    border-radius: 20px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .row{
+    flex-direction:column;
+  }
+  .card{
+    width:100%;
+    margin-bottom:10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="top">
+  <img src="Banner.png" alt="Webinar Banner">
+</div>
+
+<!-- DATE -->
+<div class="date">
+
+📅22nd April 2026 | 3pm - 4pm
+</div>
+
+<!-- PARALLEL SECTION -->
+<div class="row">
+
+  <!-- LEFT -->
+  <div class="left">
+    <h3>Greetings!</h3>
+    <p>
+    Redington, in collaboration with AWS, invites you to Parivartan,
+    a focused webinar series designed to help partners unlock new opportunities
+    within the Public Sector ecosystem.
+    </p>
+
+    <p>
+    <b>Tailored for existing partners, ISVs, and commercial solution providers</b>,
+    this series will enable you to expand into high-growth sectors like government,
+    healthcare and education, while strengthening your AWS capabilities.
+    </p>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <h3>AGENDA</h3>
+
+    <div class="item">
+      <div class="icon">›</div>
+      <div>
+        <b>AWS Perspective</b><br>
+        Public Sector market trends and high-impact use cases
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="item">
+      <div class="icon">›</div>
+      <div>
+        <b>Redington Solution Play</b><br>
+        MSP, migration, and GenAI-led growth opportunities for partners
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="item">
+      <div class="icon">›</div>
+      <div>
+        <b>Partner Growth Tracks</b><br>
+        PAP 2.0, Unnati 3.0, solution stack, and AWS Marketplace monetization pathways
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- UNLOCK -->
+<h2 class="title">WHAT YOU WILL UNLOCK</h2>
+
+<div class="cards">
+  <div class="card"><div class="num">01</div>Key AWS market insights and use cases</div>
+  <div class="card"><div class="num">02</div>Redington's MSP,migration and GenAI Solution Play</div>
+  <div class="card"><div class="num">03</div>Access to partner growth programs- PAP 2.0 & Unnati 3.0</div>
+  <div class="card"><div class="num">04</div>Understanding of AWS Marketplace for scaling licensing</div>
+  <div class="card"><div class="num">05</div>Strategies to acquire new logos through partner ecosystem influence</div>
+</div>
+
+<a href="https://www.bigmarker.com/redington/ps-1-0" target="_blank"class="btn">Register Now</a>
+
+<div class="footer">
+Join the upcoming session to explore how you can expand your AWS footprint and unlock new revenue streams.
+</div>
+<div class="bottom-banner">
+    <img src="unlock next.png" alt="Unlock Next">
+</div>
+
+</div>
+
+</body>
+</html>
