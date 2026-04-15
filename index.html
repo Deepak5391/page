@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+ /* Outer background image */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG1me0k47HBLxdIeTGS4_N_P_ra-CH-DdoEg&s"); /* apni image ka naam */
+    background-size: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Main Content Frame */
+.container {
+    max-width: 900px;
+    width: 100%;
+
+    margin: 40px auto;   /* outer space banayega */
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+/* TOP IMAGE */
+.top img{
+  width:100%;
+  display:block;
+  border-bottom-left-radius:25px;
+  border-bottom-right-radius:25px;
+}
+
+/* DATE BAR */
+.date{
+  
+  padding:10px;
+  text-align:right;
+  font-weight:700;
+  font-size:25px;
+}
+
+/* ROW */
+.row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: #f7efe9;
+  box-shadow: 0 12px 30px rgba(21, 50, 102, 0.12);
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+/* LEFT BOX */
+.left{
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px) 0 0 / 110px 110px,
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px) 0 0 / 110px 110px,
+    linear-gradient(135deg, rgba(116, 174, 255, 0.45), rgba(170, 208, 255, 0.8));
+  padding: 28px;
+  border: 12px solid #f7efe9;
+}
+
+/* RIGHT BOX */
+.right{
+  padding: 32px 34px;
+  background: #f7efe9;
+}
+
+/* AGENDA STYLE */
+.section-title {
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin: 0 0 24px;
+  font-weight: 400;
+}
+
+.greeting-heading {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0 0 14px;
+}
+
+.left p {
+  margin: 0 0 22px;
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
+
+.agenda-list {
+  display: grid;
+  gap: 20px;
+}
+
+.agenda-item {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding-bottom: 18px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+}
+
+.agenda-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.bullet {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.agenda-item strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+/* TITLE */
+.title{
+  text-align:center;
+  margin-top:20px;
+  font-weight:700;
+}
+
+/* UNLOCK CARDS (FIXED STYLE) */
+.cards{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  flex-wrap:wrap;
+}
+
+.card{
+  width:17%;
+  background:#f2f2f2;
+  border-radius:30px;
+  padding:15px 10px;
+  text-align:left;
+  font-size:13px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* NUMBER CIRCLE */
+.num{
+  background:#ddd;
+  text-align:center;
+  width:35px;
+  height:35px;
+  margin:auto;
+  border-radius:50%;
+  line-height:35px;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+/* BUTTON */
+.btn{
+  display:block;
+  width:220px;
+  margin:20px auto;
+  padding:15px;
+  background:#ff6a00;
+  color:white;
+  text-align:center;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:10px;
+  font-size:20px;
+}
+.bottom-banner {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    justify-content: right;
+    pointer-events: none;
+}
+
+.bottom-banner img {
+    width: 100%;
+    max-width: cover;
+    border-radius: 20px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .row{
+    grid-template-columns: 1fr;
+  }
+  .card{
+    width:100%;
+    margin-bottom:10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="top">
+  <img src="Banner.png" alt="Webinar Banner">
+</div>
+
+<!-- DATE -->
+<div class="date">
+
+📅22nd April 2026 | 3pm - 4pm
+</div>
+
+<!-- PARALLEL SECTION -->
+<div class="row">
+
+  <!-- LEFT -->
+  <div class="left">
+    <div class="greeting-heading">Greetings!</div>
+    <p>
+    Redington, in collaboration with AWS, invites you to <b>The Forum - Public Sector Chapter</b>,
+    a focused webinar series designed to help partners unlock new opportunities
+    within the Public Sector ecosystem.
+    </p>
+
+    <p>
+    <b>Tailored for existing partners, ISVs, and commercial solution providers</b>,
+    this series will enable you to expand into high-growth sectors like government,
+    healthcare and education, while strengthening your AWS capabilities.
+    </p>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <h2 class="section-title">AGENDA</h2>
+
+    <div class="agenda-list">
+      <div class="agenda-item">
+        <div class="bullet"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 8h8M9 4l4 4-4 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <strong>AWS Perspective</strong>
+          <div>Public Sector market trends and high-impact use cases</div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="bullet"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 8h8M9 4l4 4-4 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <strong>Redington Solution Play</strong>
+          <div>MSP, migration, and GenAI-led growth opportunities for partners</div>
+        </div>
+      </div>
+
+      <div class="agenda-item">
+        <div class="bullet"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 8h8M9 4l4 4-4 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <strong>Partner Growth Tracks</strong>
+          <div>PAP 2.0, Unnati 3.0, solution stack, and AWS Marketplace monetization pathways</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- UNLOCK -->
+<h2 class="title">WHAT YOU WILL UNLOCK</h2>
+
+<div class="cards">
+  <div class="card"><div class="num">01</div>Key AWS market insights and use cases</div>
+  <div class="card"><div class="num">02</div>Redington's MSP,migration and GenAI Solution Play</div>
+  <div class="card"><div class="num">03</div>Access to partner growth programs- PAP 2.0 & Unnati 3.0</div>
+  <div class="card"><div class="num">04</div>Understanding of AWS Marketplace for scaling licensing</div>
+  <div class="card"><div class="num">05</div>Strategies to acquire new logos through partner ecosystem influence</div>
+</div>
+
+<a href="https://www.bigmarker.com/redington/ps-1-0" target="_blank"class="btn">Register Now</a>
+
+<div class="footer">
+Join the upcoming session to explore how you can expand your AWS footprint and unlock new revenue streams.
+</div>
+<div class="bottom-banner">
+    <img src="unlock next.png" alt="Unlock Next">
+</div>
+</div>
+
+</body>
+</html>
